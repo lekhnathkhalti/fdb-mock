@@ -6,7 +6,7 @@ from app.models import TheaterDetails
 router = APIRouter(prefix="/API/V1")
 
 
-@router.post("/theater/", description="This is my description")
-async def theater_detail(data: List[TheaterDetails]):
+@router.post("/theater", description="This is my description")
+async def theater_detail(data: TheaterDetails):
 
     return resp.prepare_response(data=data)
