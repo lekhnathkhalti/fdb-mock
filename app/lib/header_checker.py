@@ -7,4 +7,4 @@ async def check_custom_headers(
     TheaderCode: str = Header(None),
 ):
     if not all([Username, Password, TheaderCode]):
-        HTTPException(status_code=400, detail="Required header parameters are missing.")
+        HTTPException(status_code=401, detail="Required header parameters are missing.")

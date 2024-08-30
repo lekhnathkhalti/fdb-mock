@@ -1,6 +1,6 @@
 from app.lib import resp
 from typing import List
-from fastapi import APIRouter, Request
+from fastapi import APIRouter
 from app.models import CancelShowDetails
 
 router = APIRouter(prefix="/API/V1")
