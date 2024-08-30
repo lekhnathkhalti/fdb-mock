@@ -120,8 +120,8 @@ class ShowDetails(BaseModel):
     FiscalYear: str
     ShowId: int
     ShowStatus: int
-    ShowDateTime: datetime
-    ShowAddedDateTime: datetime
+    ShowDateTime: str
+    ShowAddedDateTime: str
     IsRealTime: int
 
 
