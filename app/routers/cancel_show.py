@@ -1,11 +1,11 @@
 from app.lib import resp
 from typing import List
 from fastapi import APIRouter, Request
-from app.models import TheaterData
+from app.models import CancelShowDetails
 
 router = APIRouter(prefix="/API/V1")
 
 
 @router.post("/cancel_show/")
-async def cancel_show(data: List[TheaterData]):
+async def cancel_show(data: List[CancelShowDetails]):
     return resp.prepare_response(data=data)

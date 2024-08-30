@@ -100,7 +100,7 @@ class TicketDetails(BaseModel):
     IsRealTime: int
 
 
-class TicketReturn(BaseModel):
+class TicketReturnDetails(BaseModel):
     TheaterCode: str
     FiscalYear: str
     ShowId: int
