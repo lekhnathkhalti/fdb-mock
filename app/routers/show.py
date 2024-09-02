@@ -7,5 +7,5 @@ router = APIRouter(prefix="/API/V1")
 
 
 @router.post("/show")
-async def show(data: ShowDetails):
+async def show(data: List[ShowDetails]):
     return resp.prepare_response(data=data)
