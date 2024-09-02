@@ -6,6 +6,6 @@ from app.models import TicketDetails
 router = APIRouter(prefix="/API/V1")
 
 
-@router.post("/ticket/")
+@router.post("/TicketInfo")
 async def ticket(data: List[TicketDetails]):
     return resp.prepare_response(data=data)

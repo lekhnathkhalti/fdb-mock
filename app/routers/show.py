@@ -6,6 +6,6 @@ from app.models import ShowDetails
 router = APIRouter(prefix="/API/V1")
 
 
-@router.post("/show")
+@router.post("/ShowInfo")
 async def show(data: List[ShowDetails]):
     return resp.prepare_response(data=data)

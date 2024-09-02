@@ -6,6 +6,6 @@ from app.models import CancelShowDetails
 router = APIRouter(prefix="/API/V1")
 
 
-@router.post("/cancel_show/")
+@router.post("/ShowCancel")
 async def cancel_show(data: CancelShowDetails):
     return resp.prepare_response(data=data)
