@@ -7,5 +7,5 @@ router = APIRouter(prefix="/API/V1")
 
 
 @router.post("/ShowCancel")
-async def cancel_show(data: CancelShowDetails):
+async def cancel_show(data: List[CancelShowDetails]):
     return resp.prepare_response(data=data)
