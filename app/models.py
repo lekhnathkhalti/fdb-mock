@@ -129,11 +129,21 @@ class CancelShowDetails(BaseModel):
     TheaterCode: str
     FiscalYear: str
     ShowId: int
-    ShowDateTime: datetime
     ShowCancelledReason: Optional[str] = Field(
         default=None, description="Reason for show cancellation, if any"
     )
-    ShowCancelledDateTime: Optional[datetime] = Field(
+    ShowCancelledDateTime: Optional[str] = Field(
         default=None, description="Date and time when the show was cancelled, if any"
     )
     IsRealTime: int
+
+
+{
+    "ShowId": 1,
+    "FiscalYear": "2024/2025",
+    "IsRealTime": 2,
+    "ShowStatus": 1,
+    "TheaterCode": "N/A",
+    "ShowCancelledReason": "This is show creations",
+    "ShowCancelledDateTime": "2024-09-02 11:19:07",
+}
