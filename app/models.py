@@ -43,7 +43,7 @@ class TicketType(BaseModel):
     Seats: List[str]
 
 
-class TheaterDetails(BaseModel):
+class ScreenDetails(BaseModel):
     Name: str
     ScreenId: int
     FiscalYear: str
@@ -54,6 +54,11 @@ class TheaterDetails(BaseModel):
     HorizontalStart: str
     DisableSeats: List[str]
     TicketType: List[TicketType]
+
+
+class TheaterDetails(BaseModel):
+    Screen: List[ScreenDetails]
+    TheaterCode: str
 
 
 class Tax(BaseModel):
