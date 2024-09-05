@@ -85,9 +85,9 @@ class TicketDetails(BaseModel):
     MovieName: str
     MovieCode: str
     FiscalYear: str
-    ShowDateTime: datetime
+    ShowDateTime: str
     ShowId: int
-    TicketPrintDateTime: datetime
+    TicketPrintDateTime: str
     TicketTypeName: str
     TicketTypeId: int
     PaymentTypeName: str
