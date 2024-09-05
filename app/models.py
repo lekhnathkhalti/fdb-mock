@@ -35,7 +35,7 @@ class MovieInfo(BaseModel):
     Directors: List[Director]
     Producers: List[Producer]
     Distributors: List[Distributor]
-    ReleaseDate: datetime
+    ReleaseDate: str
 
 
 class TicketType(BaseModel):
