@@ -1,9 +1,11 @@
 from fastapi import FastAPI, Depends
-
 from app.lib.header_checker import check_custom_headers
+from app.middlewares.headercheckr import HeaderValidationMiddleware
 from app.routers import theater, ticket, return_ticket, show, cancel_show, movie_info
 
 app = FastAPI()
+
+app.add_middleware(HeaderValidationMiddleware)
 
 app.include_router(
     theater.router, tags=["Theater"], dependencies=[Depends(check_custom_headers)]
