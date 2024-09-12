@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Depends
 from app.lib.header_checker import check_custom_headers
 from app.middlewares.headercheckr import HeaderValidationMiddleware
-from app.routers import theater, ticket, return_ticket, show, cancel_show
+from app.routers import theater, ticket, return_ticket, show, cancel_show, ird_invoice
 
 app = FastAPI()
 
@@ -24,5 +24,11 @@ app.include_router(
 app.include_router(
     cancel_show.router,
     tags=["Ticket Cancel"],
+    dependencies=[Depends(check_custom_headers)],
+)
+
+app.include_router(
+    ird_invoice.router,
+    tags=["IRD Invoices"],
     dependencies=[Depends(check_custom_headers)],
 )
