@@ -14,4 +14,4 @@ from .fdb import (
     TicketReturnDetails,
     TicketType,
 )
-from .ird import Invoice, InvoiceReturn
+from .ird import Bill, BillReturn

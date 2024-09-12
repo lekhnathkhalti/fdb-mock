@@ -2,7 +2,7 @@ from datetime import datetime
 from pydantic import BaseModel
 
 
-class Invoice(BaseModel):
+class Bill(BaseModel):
     username: str
     password: str
     seller_pan: str
@@ -26,7 +26,7 @@ class Invoice(BaseModel):
     datetimeClient: datetime
 
 
-class InvoiceReturn(Invoice):
+class BillReturn(Bill):
     ref_invoice_number: str
     credit_note_number: str
     credit_note_date: str
