@@ -1,41 +1,11 @@
-from pydantic import BaseModel, Field
-from typing import List, Optional
+from typing import List
 from datetime import datetime
+from pydantic import BaseModel, Field
 
 
 class Genre(BaseModel):
     Name: str
     GenreCode: str
-
-
-class Director(BaseModel):
-    Name: str
-    DirectorCode: str
-
-
-class Producer(BaseModel):
-    Name: str
-    ProducerCode: str
-
-
-class Distributor(BaseModel):
-    Name: str
-    DistributorCode: str
-
-
-class MovieInfo(BaseModel):
-    SerialNumber: str
-    MovieCode: str
-    MovieName: str
-    Grade: str
-    ProductionHouse: str
-    Language: str
-    ProductionType: int
-    Genres: List[Genre]
-    Directors: List[Director]
-    Producers: List[Producer]
-    Distributors: List[Distributor]
-    ReleaseDate: str
 
 
 class TicketType(BaseModel):
